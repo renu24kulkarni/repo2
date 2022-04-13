@@ -1,0 +1,94 @@
+Git -
+pert 1
+Yum updateinfo
+yum install git
+
+Part 2
+mkdir demoapp
+cd demoapp
+git init -------- ti initialize git 
+
+Part 3
+git config --global user.name "renuka"
+git config --global user.email "renu24kamble@gmail.com"
+
+Part4 
+git status 	
+
+vi r1.txt
+git status
+git add r1.txt   or  git add .    ------ (.)for all files to be added
+git status
+git commit -m "Messsage with file"
+
+git log -------------- information about git commits (who created, when created)
+
+date 
+
+git show (first 7 no. of Hash ID ) ---- to check wrt Hash ID
+
+Part 5
+
+making some changes in r1.txt
+git status
+git add .
+git commit -m ""
+
+Part 6
+
+git ls-files -------------- to confirm which files are tracked by the git 
+
+git remote add origin https://github.com/renu24kulkarni/repo1.git -------------- connect your remote repository to the local repository
+
+git remote -v ------------- to print connected repository
+
+git push origin master -------------- to push anything from Local repo to remote repo
+
+git push origin master --force  -----------------if not done by above command
+
+
+Personal access token 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
+
+
+Part 7
+
+git branch -------list available branch
+git branch Branch_name ---------- create new branch
+git checkout Branch_name ---------switched to another branch
+add new file, check git log 
+
+git checkout master
+git merge Branch_name --------- to merge chnages of new branch into the master branch
+
+Git rebase master ----------------need to search on google (Basically in Local repository when we create the new branch from master branch, then all logs
+present in the master are also present in new branch, but after that when we are changing something in master branch is not update in new branch, so to update the 
+new branch with master logs we can use rebase )
+
+git log --oneline Branch_name --------------- logs in one line
+
+we can archive the repository 
+we can bundle the repository
+we can use git stash or git stash apply -------- to saving all uncommitted changes 
+
+git and github
+
+git is installed and maintained in local system
+Github id exclusively the cloud-based 
+
+git is the tool
+github is the service for the projects which uses git 
+
+
+git remote rename origin repo3 ----------- rename repository name form origin to repo1
+
+git remote remove repository_name -------------- to remove repository (ex. git remote remove origin )
+ or git remote rm repository_name  
+ 
+to delete branch from remote repository
+git branch old_branch ------------created one branch using master as default branch
+git push origin old_branch --------- push this branch to remote repository
+git push origin --delete old_branch ---------deleted old_branch from remote repository
+
+to delete branch from local repository
+git branch -d old_branch -------------- remember that... (always deletes branch from remote repository first then from Local repository)
+
